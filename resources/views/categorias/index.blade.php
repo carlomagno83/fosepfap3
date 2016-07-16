@@ -18,7 +18,8 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>NOMBRE</th>
+                            <th>CAT_ID</th>
+                        <th>CAT_NOM</th>
                             <th class="text-right">OPTIONS</th>
                         </tr>
                     </thead>
@@ -27,7 +28,8 @@
                         @foreach($categorias as $categorium)
                             <tr>
                                 <td>{{$categorium->id}}</td>
-                                <td>{{$categorium->nombre}}</td>
+                                <td>{{$categorium->cat_id}}</td>
+                    <td>{{$categorium->cat_nom}}</td>
                                 <td class="text-right">
                                     <a class="btn btn-xs btn-primary" href="{{ route('categorias.show', $categorium->id) }}"><i class="glyphicon glyphicon-eye-open"></i> View</a>
                                     <a class="btn btn-xs btn-warning" href="{{ route('categorias.edit', $categorium->id) }}"><i class="glyphicon glyphicon-edit"></i> Edit</a>

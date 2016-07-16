@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
     <!-- /meta -->
 
-    <title>CENEPRED</title>
+    <title>FOSEPFAP</title>
 
     <!-- page level plugin styles -->
     <link rel="stylesheet" href="{{URL::to('plugins/chosen/chosen.min.css')}}">
@@ -69,7 +69,7 @@
             <a href="{{URL::to('admin')}}" class="navbar-brand">
                 {{--<img src="img/logo.png" alt="">--}}
                 <span class="heading-font">
-                        CENEPRED
+                        FOSEPFAP
                     </span>
             </a>
             <!-- /logo -->
@@ -136,14 +136,19 @@
                             <span>Mantenimiento</span>
                         </a>
                         <ul class="sub-menu">
-                            <li class="hook_item hook_consulta">
+                            <li>
+                                <a href="{{URL::to('categorias')}}">
+                                    <span>Categorías</span>
+                                </a>
+                            </li>
+                            <li>
                                 <a href="{{URL::to('proveedors')}}">
                                     <span>Proveedores</span>
                                 </a>
                             </li>
-                            <li class="hook_item hook_simulador">
-                                <a href="{{URL::to('categorias')}}">
-                                    <span>Categorías</span>
+                            <li>
+                                <a href="{{URL::to('urnas')}}">
+                                    <span>Urnas</span>
                                 </a>
                             </li>
                         </ul>

@@ -8,12 +8,6 @@ use Illuminate\Http\Request;
 
 class CategoriumController extends Controller {
 
-	public function __construct()
-	{
-		$this->middleware('auth');
-	}
-	
-	
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -46,7 +40,8 @@ class CategoriumController extends Controller {
 	{
 		$categorium = new Categorium();
 
-		$categorium->nombre = $request->input("nombre");
+		$categorium->cat_id = $request->input("cat_id");
+        $categorium->cat_nom = $request->input("cat_nom");
 
 		$categorium->save();
 
@@ -62,7 +57,7 @@ class CategoriumController extends Controller {
 	public function show($id)
 	{
 		$categorium = Categorium::findOrFail($id);
-		//dd($categorium);
+
 		return view('categorias.show', compact('categorium'));
 	}
 
@@ -90,7 +85,8 @@ class CategoriumController extends Controller {
 	{
 		$categorium = Categorium::findOrFail($id);
 
-		$categorium->nombre = $request->input("nombre");
+		$categorium->cat_id = $request->input("cat_id");
+        $categorium->cat_nom = $request->input("cat_nom");
 
 		$categorium->save();
 

@@ -13,3 +13,5 @@ Route::get('/home', 'HomeController@index');
 Route::resource("categorias","CategoriumController");
 
 Route::resource("proveedors","ProveedorController");
+
+Route::resource("urnas","UrnaController");

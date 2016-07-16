@@ -17,11 +17,18 @@
             <form action="{{ route('categorias.store') }}" method="POST">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-                <div class="form-group @if($errors->has('nombre')) has-error @endif">
-                       <label for="nombre-field">Nombre</label>
-                    <input type="text" id="nombre-field" name="nombre" class="form-control" value="{{ old("nombre") }}"/>
-                       @if($errors->has("nombre"))
-                        <span class="help-block">{{ $errors->first("nombre") }}</span>
+                <div class="form-group @if($errors->has('cat_id')) has-error @endif">
+                       <label for="cat_id-field">Cat_id</label>
+                    <input type="text" id="cat_id-field" name="cat_id" class="form-control" value="{{ old("cat_id") }}"/>
+                       @if($errors->has("cat_id"))
+                        <span class="help-block">{{ $errors->first("cat_id") }}</span>
+                       @endif
+                    </div>
+                    <div class="form-group @if($errors->has('cat_nom')) has-error @endif">
+                       <label for="cat_nom-field">Cat_nom</label>
+                    <input type="text" id="cat_nom-field" name="cat_nom" class="form-control" value="{{ old("cat_nom") }}"/>
+                       @if($errors->has("cat_nom"))
+                        <span class="help-block">{{ $errors->first("cat_nom") }}</span>
                        @endif
                     </div>
                 <div class="well well-sm">

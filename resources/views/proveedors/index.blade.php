@@ -18,12 +18,15 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>RUC</th>
-                        <th>NOMBRE</th>
-                        <th>DIRECCION</th>
-                        <th>IDDISTRITO</th>
-                        <th>TELEFONO_FIJO</th>
-                        <th>TELEFONO_CELULAR</th>
+                            <th>PRO_RUC</th>
+                        <th>PRO_RSO</th>
+                        <th>PRO_DIR</th>
+                        <th>PRO_FIJ</th>
+                        <th>PRO_CEL</th>
+                        <th>PRO_MAI</th>
+                        <th>PRO_OBS</th>
+                        <th>DEPARTAMENTO_ID</th>
+                        <th>CATEGORIA_ID</th>
                             <th class="text-right">OPTIONS</th>
                         </tr>
                     </thead>
@@ -32,12 +35,15 @@
                         @foreach($proveedors as $proveedor)
                             <tr>
                                 <td>{{$proveedor->id}}</td>
-                                <td>{{$proveedor->ruc}}</td>
-                    <td>{{$proveedor->nombre}}</td>
-                    <td>{{$proveedor->direccion}}</td>
-                    <td>{{$proveedor->iddistrito}}</td>
-                    <td>{{$proveedor->telefono_fijo}}</td>
-                    <td>{{$proveedor->telefono_celular}}</td>
+                                <td>{{$proveedor->pro_ruc}}</td>
+                    <td>{{$proveedor->pro_rso}}</td>
+                    <td>{{$proveedor->pro_dir}}</td>
+                    <td>{{$proveedor->pro_fij}}</td>
+                    <td>{{$proveedor->pro_cel}}</td>
+                    <td>{{$proveedor->pro_mai}}</td>
+                    <td>{{$proveedor->pro_obs}}</td>
+                    <td>{{$proveedor->departamento_id}}</td>
+                    <td>{{$proveedor->categoria->cat_nom}}</td>
                                 <td class="text-right">
                                     <a class="btn btn-xs btn-primary" href="{{ route('proveedors.show', $proveedor->id) }}"><i class="glyphicon glyphicon-eye-open"></i> View</a>
                                     <a class="btn btn-xs btn-warning" href="{{ route('proveedors.edit', $proveedor->id) }}"><i class="glyphicon glyphicon-edit"></i> Edit</a>

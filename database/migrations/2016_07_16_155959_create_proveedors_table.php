@@ -14,18 +14,15 @@ class CreateProveedorsTable extends Migration {
 	{
 		Schema::create('proveedors', function(Blueprint $table) {
             $table->increments('id');
-            $table->string('ruc');
-            $table->string('nombre');
-            $table->string('direccion');
-            $table->int('iddistrito');
-            $table->string('telefono_fijo');
-            $table->string('telefono_celular');
-            $table->string('mail');
-            $table->int('costo');
-            $table->text('observacion');
-            $table->string('user');
-            $table->datetime('fecha');
-            $table->int('id_categoria');
+            $table->string('pro_ruc');
+            $table->string('pro_rso');
+            $table->string('pro_dir');
+            $table->string('pro_fij');
+            $table->string('pro_cel');
+            $table->string('pro_mai');
+            $table->string('pro_obs');
+            $table->int('departamento_id');
+            $table->int('categoria_id');
             $table->timestamps();
         });
 	}

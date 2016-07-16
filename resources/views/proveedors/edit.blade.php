@@ -18,88 +18,67 @@
                 <input type="hidden" name="_method" value="PUT">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-                <div class="form-group @if($errors->has('ruc')) has-error @endif">
-                       <label for="ruc-field">Ruc</label>
-                    <input type="text" id="ruc-field" name="ruc" class="form-control" value="{{$proveedor->ruc }}"/>
-                       @if($errors->has("ruc"))
-                        <span class="help-block">{{ $errors->first("ruc") }}</span>
+                <div class="form-group @if($errors->has('pro_ruc')) has-error @endif">
+                       <label for="pro_ruc-field">Pro_ruc</label>
+                    <input type="text" id="pro_ruc-field" name="pro_ruc" class="form-control" value="{{ $proveedor->pro_ruc }}"/>
+                       @if($errors->has("pro_ruc"))
+                        <span class="help-block">{{ $errors->first("pro_ruc") }}</span>
                        @endif
                     </div>
-                    <div class="form-group @if($errors->has('nombre')) has-error @endif">
-                       <label for="nombre-field">Nombre</label>
-                    <input type="text" id="nombre-field" name="nombre" class="form-control" value="{{$proveedor->nombre }}"/>
-                       @if($errors->has("nombre"))
-                        <span class="help-block">{{ $errors->first("nombre") }}</span>
+                    <div class="form-group @if($errors->has('pro_rso')) has-error @endif">
+                       <label for="pro_rso-field">Pro_rso</label>
+                    <input type="text" id="pro_rso-field" name="pro_rso" class="form-control" value="{{ $proveedor->pro_rso }}"/>
+                       @if($errors->has("pro_rso"))
+                        <span class="help-block">{{ $errors->first("pro_rso") }}</span>
                        @endif
                     </div>
-                    <div class="form-group @if($errors->has('direccion')) has-error @endif">
-                       <label for="direccion-field">Direccion</label>
-                    <input type="text" id="direccion-field" name="direccion" class="form-control" value="{{ $proveedor->direccion }}"/>
-                       @if($errors->has("direccion"))
-                        <span class="help-block">{{ $errors->first("direccion") }}</span>
+                    <div class="form-group @if($errors->has('pro_dir')) has-error @endif">
+                       <label for="pro_dir-field">Pro_dir</label>
+                    <input type="text" id="pro_dir-field" name="pro_dir" class="form-control" value="{{ $proveedor->pro_dir }}"/>
+                       @if($errors->has("pro_dir"))
+                        <span class="help-block">{{ $errors->first("pro_dir") }}</span>
                        @endif
                     </div>
-                    <div class="form-group @if($errors->has('iddistrito')) has-error @endif">
-                       <label for="iddistrito-field">Iddistrito</label>
-                    <input type="text" id="iddistrito-field" name="iddistrito" class="form-control" value="{{$proveedor->iddistrito }}"/>
-                       @if($errors->has("iddistrito"))
-                        <span class="help-block">{{ $errors->first("iddistrito") }}</span>
+                    <div class="form-group @if($errors->has('pro_fij')) has-error @endif">
+                       <label for="pro_fij-field">Pro_fij</label>
+                    <input type="text" id="pro_fij-field" name="pro_fij" class="form-control" value="{{ $proveedor->pro_fij }}"/>
+                       @if($errors->has("pro_fij"))
+                        <span class="help-block">{{ $errors->first("pro_fij") }}</span>
                        @endif
                     </div>
-                    <div class="form-group @if($errors->has('telefono_fijo')) has-error @endif">
-                       <label for="telefono_fijo-field">Telefono_fijo</label>
-                    <input type="text" id="telefono_fijo-field" name="telefono_fijo" class="form-control" value="{{ $proveedor->telefono_fijo }}"/>
-                       @if($errors->has("telefono_fijo"))
-                        <span class="help-block">{{ $errors->first("telefono_fijo") }}</span>
+                    <div class="form-group @if($errors->has('pro_cel')) has-error @endif">
+                       <label for="pro_cel-field">Pro_cel</label>
+                    <input type="text" id="pro_cel-field" name="pro_cel" class="form-control" value="{{ $proveedor->pro_cel }}"/>
+                       @if($errors->has("pro_cel"))
+                        <span class="help-block">{{ $errors->first("pro_cel") }}</span>
                        @endif
                     </div>
-                    <div class="form-group @if($errors->has('telefono_celular')) has-error @endif">
-                       <label for="telefono_celular-field">Telefono_celular</label>
-                    <input type="text" id="telefono_celular-field" name="telefono_celular" class="form-control" value="{{ $proveedor->telefono_celular }}"/>
-                       @if($errors->has("telefono_celular"))
-                        <span class="help-block">{{ $errors->first("telefono_celular") }}</span>
+                    <div class="form-group @if($errors->has('pro_mai')) has-error @endif">
+                       <label for="pro_mai-field">Pro_mai</label>
+                    <input type="text" id="pro_mai-field" name="pro_mai" class="form-control" value="{{ $proveedor->pro_mai }}"/>
+                       @if($errors->has("pro_mai"))
+                        <span class="help-block">{{ $errors->first("pro_mai") }}</span>
                        @endif
                     </div>
-                    <div class="form-group @if($errors->has('mail')) has-error @endif">
-                       <label for="mail-field">Mail</label>
-                    <input type="text" id="mail-field" name="mail" class="form-control" value="{{ $proveedor->mail }}"/>
-                       @if($errors->has("mail"))
-                        <span class="help-block">{{ $errors->first("mail") }}</span>
+                    <div class="form-group @if($errors->has('pro_obs')) has-error @endif">
+                       <label for="pro_obs-field">Pro_obs</label>
+                    <input type="text" id="pro_obs-field" name="pro_obs" class="form-control" value="{{ $proveedor->pro_obs }}"/>
+                       @if($errors->has("pro_obs"))
+                        <span class="help-block">{{ $errors->first("pro_obs") }}</span>
                        @endif
                     </div>
-                    <div class="form-group @if($errors->has('costo')) has-error @endif">
-                       <label for="costo-field">Costo</label>
-                    <input type="text" id="costo-field" name="costo" class="form-control" value="{{ $proveedor->costo }}"/>
-                       @if($errors->has("costo"))
-                        <span class="help-block">{{ $errors->first("costo") }}</span>
+                    <div class="form-group @if($errors->has('departamento_id')) has-error @endif">
+                       <label for="departamento_id-field">Departamento_id</label>
+                    <input type="text" id="departamento_id-field" name="departamento_id" class="form-control" value="{{ $proveedor->departamento_id }}"/>
+                       @if($errors->has("departamento_id"))
+                        <span class="help-block">{{ $errors->first("departamento_id") }}</span>
                        @endif
                     </div>
-                    <div class="form-group @if($errors->has('observacion')) has-error @endif">
-                       <label for="observacion-field">Observacion</label>
-                    <textarea class="form-control" id="observacion-field" rows="3" name="observacion">{{ $proveedor->observacion }}</textarea>
-                       @if($errors->has("observacion"))
-                        <span class="help-block">{{ $errors->first("observacion") }}</span>
-                       @endif
-                    </div>
-                    <div class="form-group @if($errors->has('user')) has-error @endif">
-                       <label for="user-field">User</label>
-                    <input type="text" id="user-field" name="user" class="form-control" value="{{ $proveedor->user }}"/>
-                       @if($errors->has("user"))
-                        <span class="help-block">{{ $errors->first("user") }}</span>
-                       @endif
-                    </div>
-                    <div class="form-group @if($errors->has('fecha')) has-error @endif">
-                       <label for="fecha-field">Fecha</label>
-                    <input type="text" id="fecha-field" name="fecha" class="form-control" value="{{ $proveedor->fecha }}"/>
-                       @if($errors->has("fecha"))
-                        <span class="help-block">{{ $errors->first("fecha") }}</span>
-                       @endif
-                    </div>
-                    <div class="form-group @if($errors->has('id_categoria')) has-error @endif">
-                       <label for="id_categoria-field">Id_categoria</label>
-                    <input type="text" id="id_categoria-field" name="id_categoria" class="form-control" value="{{ $proveedor->id_categoria }}"/>
-                       @if($errors->has("id_categoria"))
-                        <span class="help-block">{{ $errors->first("id_categoria") }}</span>
+                    <div class="form-group @if($errors->has('categoria_id')) has-error @endif">
+                       <label for="categoria_id-field">Categoria_id</label>
+                    <input type="text" id="categoria_id-field" name="categoria_id" class="form-control" value="{{ $proveedor->categoria_id }}"/>
+                       @if($errors->has("categoria_id"))
+                        <span class="help-block">{{ $errors->first("categoria_id") }}</span>
                        @endif
                     </div>
                 <div class="well well-sm">

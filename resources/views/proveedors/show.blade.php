@@ -20,55 +20,43 @@
             <form action="#">
                 <div class="form-group">
                     <label for="nome">ID</label>
-                    <p class="form-control-static">{{$proveedor->id}}</p>
+                    <p class="form-control-static"></p>
                 </div>
                 <div class="form-group">
-                     <label for="ruc">RUC</label>
-                     <p class="form-control-static">{{$proveedor->ruc}}</p>
+                     <label for="pro_ruc">PRO_RUC</label>
+                     <p class="form-control-static">{{$proveedor->pro_ruc}}</p>
                 </div>
                     <div class="form-group">
-                     <label for="nombre">NOMBRE</label>
-                     <p class="form-control-static">{{$proveedor->nombre}}</p>
+                     <label for="pro_rso">PRO_RSO</label>
+                     <p class="form-control-static">{{$proveedor->pro_rso}}</p>
                 </div>
                     <div class="form-group">
-                     <label for="direccion">DIRECCION</label>
-                     <p class="form-control-static">{{$proveedor->direccion}}</p>
+                     <label for="pro_dir">PRO_DIR</label>
+                     <p class="form-control-static">{{$proveedor->pro_dir}}</p>
                 </div>
                     <div class="form-group">
-                     <label for="iddistrito">IDDISTRITO</label>
-                     <p class="form-control-static">{{$proveedor->iddistrito}}</p>
+                     <label for="pro_fij">PRO_FIJ</label>
+                     <p class="form-control-static">{{$proveedor->pro_fij}}</p>
                 </div>
                     <div class="form-group">
-                     <label for="telefono_fijo">TELEFONO_FIJO</label>
-                     <p class="form-control-static">{{$proveedor->telefono_fijo}}</p>
+                     <label for="pro_cel">PRO_CEL</label>
+                     <p class="form-control-static">{{$proveedor->pro_cel}}</p>
                 </div>
                     <div class="form-group">
-                     <label for="telefono_celular">TELEFONO_CELULAR</label>
-                     <p class="form-control-static">{{$proveedor->telefono_celular}}</p>
+                     <label for="pro_mai">PRO_MAI</label>
+                     <p class="form-control-static">{{$proveedor->pro_mai}}</p>
                 </div>
                     <div class="form-group">
-                     <label for="mail">MAIL</label>
-                     <p class="form-control-static">{{$proveedor->mail}}</p>
+                     <label for="pro_obs">PRO_OBS</label>
+                     <p class="form-control-static">{{$proveedor->pro_obs}}</p>
                 </div>
                     <div class="form-group">
-                     <label for="costo">COSTO</label>
-                     <p class="form-control-static">{{$proveedor->costo}}</p>
+                     <label for="departamento_id">DEPARTAMENTO_ID</label>
+                     <p class="form-control-static">{{$proveedor->departamento_id}}</p>
                 </div>
                     <div class="form-group">
-                     <label for="observacion">OBSERVACION</label>
-                     <p class="form-control-static">{{$proveedor->observacion}}</p>
-                </div>
-                    <div class="form-group">
-                     <label for="user">USER</label>
-                     <p class="form-control-static">{{$proveedor->user}}</p>
-                </div>
-                    <div class="form-group">
-                     <label for="fecha">FECHA</label>
-                     <p class="form-control-static">{{$proveedor->fecha}}</p>
-                </div>
-                    <div class="form-group">
-                     <label for="id_categoria">ID_CATEGORIA</label>
-                     <p class="form-control-static">{{$proveedor->id_categoria}}</p>
+                     <label for="categoria_id">CATEGORIA_ID</label>
+                     <p class="form-control-static">{{$proveedor->categoria_id}}</p>
                 </div>
             </form>
 

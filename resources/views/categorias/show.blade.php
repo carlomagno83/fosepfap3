@@ -20,11 +20,15 @@
             <form action="#">
                 <div class="form-group">
                     <label for="nome">ID</label>
-                    <p class="form-control-static">{{$categorium->id}}</p>
+                    <p class="form-control-static"></p>
                 </div>
                 <div class="form-group">
-                     <label for="nombre">NOMBRE</label>
-                     <p class="form-control-static">{{$categorium->nombre}}</p>
+                     <label for="cat_id">CAT_ID</label>
+                     <p class="form-control-static">{{$categorium->cat_id}}</p>
+                </div>
+                    <div class="form-group">
+                     <label for="cat_nom">CAT_NOM</label>
+                     <p class="form-control-static">{{$categorium->cat_nom}}</p>
                 </div>
             </form>
 

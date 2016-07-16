@@ -1,5 +1,5 @@
 <?php namespace App\Http\Controllers;
-
+	
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -8,12 +8,6 @@ use Illuminate\Http\Request;
 
 class ProveedorController extends Controller {
 
-
-	public function __construct()
-	{
-		$this->middleware('auth');
-	}
-	
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -46,18 +40,15 @@ class ProveedorController extends Controller {
 	{
 		$proveedor = new Proveedor();
 
-		$proveedor->ruc = $request->input("ruc");
-        $proveedor->nombre = $request->input("nombre");
-        $proveedor->direccion = $request->input("direccion");
-        $proveedor->iddistrito = $request->input("iddistrito");
-        $proveedor->telefono_fijo = $request->input("telefono_fijo");
-        $proveedor->telefono_celular = $request->input("telefono_celular");
-        $proveedor->mail = $request->input("mail");
-        $proveedor->costo = $request->input("costo");
-        $proveedor->observacion = $request->input("observacion");
-        $proveedor->user = $request->input("user");
-        $proveedor->fecha = $request->input("fecha");
-        $proveedor->id_categoria = $request->input("id_categoria");
+		$proveedor->pro_ruc = $request->input("pro_ruc");
+        $proveedor->pro_rso = $request->input("pro_rso");
+        $proveedor->pro_dir = $request->input("pro_dir");
+        $proveedor->pro_fij = $request->input("pro_fij");
+        $proveedor->pro_cel = $request->input("pro_cel");
+        $proveedor->pro_mai = $request->input("pro_mai");
+        $proveedor->pro_obs = $request->input("pro_obs");
+        $proveedor->departamento_id = $request->input("departamento_id");
+        $proveedor->categoria_id = $request->input("categoria_id");
 
 		$proveedor->save();
 
@@ -101,18 +92,15 @@ class ProveedorController extends Controller {
 	{
 		$proveedor = Proveedor::findOrFail($id);
 
-		$proveedor->ruc = $request->input("ruc");
-        $proveedor->nombre = $request->input("nombre");
-        $proveedor->direccion = $request->input("direccion");
-        $proveedor->iddistrito = $request->input("iddistrito");
-        $proveedor->telefono_fijo = $request->input("telefono_fijo");
-        $proveedor->telefono_celular = $request->input("telefono_celular");
-        $proveedor->mail = $request->input("mail");
-        $proveedor->costo = $request->input("costo");
-        $proveedor->observacion = $request->input("observacion");
-        $proveedor->user = $request->input("user");
-        $proveedor->fecha = $request->input("fecha");
-        $proveedor->id_categoria = $request->input("id_categoria");
+		$proveedor->pro_ruc = $request->input("pro_ruc");
+        $proveedor->pro_rso = $request->input("pro_rso");
+        $proveedor->pro_dir = $request->input("pro_dir");
+        $proveedor->pro_fij = $request->input("pro_fij");
+        $proveedor->pro_cel = $request->input("pro_cel");
+        $proveedor->pro_mai = $request->input("pro_mai");
+        $proveedor->pro_obs = $request->input("pro_obs");
+        $proveedor->departamento_id = $request->input("departamento_id");
+        $proveedor->categoria_id = $request->input("categoria_id");
 
 		$proveedor->save();
 
