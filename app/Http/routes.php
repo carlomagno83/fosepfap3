@@ -5,11 +5,12 @@ Route::get('/', function () {
 });
 
 
-
 Route::auth();
+
 
 Route::get('/home', 'HomeController@index');
 
+//Mantenimientos
 Route::resource("categorias","CategoriumController");
 
 Route::resource("urnas","UrnaController");
@@ -36,4 +37,16 @@ Route::resource("vehiculos","VehiculoController");
 
 Route::resource("servicios","ServicioController");
 
+//Contrato
+Route::resource("traslados","TrasladoController");
+
+Route::resource("sepelios","SepelioController");
+
+Route::resource("programacionsepelios","ProgramacionsepelioController");
+
+Route::resource("gestions","GestionController");
+
+Route::resource("medicos","MedicoController");
+
+Route::resource("cabeceracontratos","CabeceracontratoController");
 
