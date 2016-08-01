@@ -23,6 +23,14 @@
                 <form action="{{ route('candelabros.store') }}" method="POST">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
+                    <div class="form-group @if($errors->has('can_nom')) has-error @endif">
+                        <label for="can_nom-field">can_nom</label>
+                        <input type="text" id="can_nom-field" name="can_nom" class="form-control" value="{{ old("can_nom") }}" required/>
+                        @if($errors->has("can_nom"))
+                            <span class="help-block">{{ $errors->first("can_nom") }}</span>
+                        @endif
+                    </div>
+
                     <div class="form-group @if($errors->has('can_tipo')) has-error @endif">
                        <label for="can_tipo-field">Can_tipo</label>
                     <input type="text" id="can_tipo-field" name="can_tipo" class="form-control" value="{{ old("can_tipo") }}" required/>
@@ -30,9 +38,10 @@
                         <span class="help-block">{{ $errors->first("can_tipo") }}</span>
                        @endif
                     </div>
+
                     <div class="form-group @if($errors->has('color_id')) has-error @endif">
                        <label for="color_id-field">Color_id</label>
-                    <input type="text" id="color_id-field" name="color_id" class="form-control" value="{{ old("color_id") }}" required/>
+                        {{Form::select('color_id', \App\Color::pluck('col_nom','id') ,null, ['placeholder' => 'Seleccione Color','id'=>'color_id-field','class'=>'form-control','required'=>''])}}
                        @if($errors->has("color_id"))
                         <span class="help-block">{{ $errors->first("color_id") }}</span>
                        @endif

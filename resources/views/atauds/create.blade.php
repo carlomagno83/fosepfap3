@@ -53,28 +53,28 @@
                     </div>
                     <div class="form-group @if($errors->has('proveedor_id')) has-error @endif">
                        <label for="proveedor_id-field">Proveedor_id</label>
-                    <input type="text" id="proveedor_id-field" name="proveedor_id" class="form-control" value="{{ old("proveedor_id") }}" required/>
+                        {{Form::select('proveedor_id', \App\Proveedor::pluck('pro_rso','id') ,null, ['placeholder' => 'Seleccione Proveedor','id'=>'proveedor_id-field','class'=>'form-control','required'=>''])}}
                        @if($errors->has("proveedor_id"))
                         <span class="help-block">{{ $errors->first("proveedor_id") }}</span>
                        @endif
                     </div>
                     <div class="form-group @if($errors->has('color_id')) has-error @endif">
                        <label for="color_id-field">Color_id</label>
-                    <input type="text" id="color_id-field" name="color_id" class="form-control" value="{{ old("color_id") }}" required/>
+                        {{Form::select('color_id', \App\Color::pluck('col_nom','id') ,null, ['placeholder' => 'Seleccione Color','id'=>'color_id-field','class'=>'form-control','required'=>''])}}
                        @if($errors->has("color_id"))
                         <span class="help-block">{{ $errors->first("color_id") }}</span>
                        @endif
                     </div>
                     <div class="form-group @if($errors->has('ataudmodelo_id')) has-error @endif">
                        <label for="ataudmodelo_id-field">Ataudmodelo_id</label>
-                    <input type="text" id="ataudmodelo_id-field" name="ataudmodelo_id" class="form-control" value="{{ old("ataudmodelo_id") }}" required/>
+                        {{Form::select('ataudmodelo_id', \App\Ataudmodelo::pluck('atm_nom','id') ,null, ['placeholder' => 'Seleccione Modelo','id'=>'ataudmodelo_id-field','class'=>'form-control','required'=>''])}}
                        @if($errors->has("ataudmodelo_id"))
                         <span class="help-block">{{ $errors->first("ataudmodelo_id") }}</span>
                        @endif
                     </div>
                     <div class="form-group @if($errors->has('ataudtamano_id')) has-error @endif">
                        <label for="ataudtamano_id-field">Ataudtamano_id</label>
-                    <input type="text" id="ataudtamano_id-field" name="ataudtamano_id" class="form-control" value="{{ old("ataudtamano_id") }}" required/>
+                        {{Form::select('ataudtamano_id', \App\Ataudtamano::pluck('att_nom','id') ,null, ['placeholder' => 'Seleccione Tamaño','id'=>'ataudtamano_id-field','class'=>'form-control','required'=>''])}}
                        @if($errors->has("ataudtamano_id"))
                         <span class="help-block">{{ $errors->first("ataudtamano_id") }}</span>
                        @endif

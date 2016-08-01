@@ -41,7 +41,6 @@ class ColorController extends Controller {
 		$color = new Color();
 
 		$color->col_nom = $request->input("col_nom");
-        $color->tipocandelabro_id = $request->input("tipocandelabro_id");
 
 		$color->save();
 
@@ -86,7 +85,6 @@ class ColorController extends Controller {
 		$color = Color::findOrFail($id);
 
 		$color->col_nom = $request->input("col_nom");
-        $color->tipocandelabro_id = $request->input("tipocandelabro_id");
 
 		$color->save();
 

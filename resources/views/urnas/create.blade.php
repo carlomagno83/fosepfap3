@@ -53,7 +53,7 @@
                     </div>
                     <div class="form-group @if($errors->has('proveedor_id')) has-error @endif">
                        <label for="proveedor_id-field">Proveedor_id</label>
-                    <input type="text" id="proveedor_id-field" name="proveedor_id" class="form-control" value="{{ old("proveedor_id") }}" required/>
+                        {{Form::select('proveedor_id', \App\Proveedor::pluck('pro_rso','id') ,null, ['placeholder' => 'Seleccione Proveedor','id'=>'proveedor_id-field','class'=>'form-control','required'=>''])}}
                        @if($errors->has("proveedor_id"))
                         <span class="help-block">{{ $errors->first("proveedor_id") }}</span>
                        @endif

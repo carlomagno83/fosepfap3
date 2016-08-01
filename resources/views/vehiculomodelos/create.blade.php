@@ -30,17 +30,20 @@
                         <span class="help-block">{{ $errors->first("vmo_nom") }}</span>
                        @endif
                     </div>
+
                     <div class="form-group @if($errors->has('vehiculomarca_id')) has-error @endif">
                        <label for="vehiculomarca_id-field">Vehiculomarca_id</label>
-                    <input type="text" id="vehiculomarca_id-field" name="vehiculomarca_id" class="form-control" value="{{ old("vehiculomarca_id") }}" required/>
+                        {{Form::select('vehiculomarca_id', \App\Vehiculomarca::pluck('vma_nom','id') ,null, ['placeholder' => 'Seleccione Marca','id'=>'vehiculomarca_id-field','class'=>'form-control','required'=>''])}}
                        @if($errors->has("vehiculomarca_id"))
                         <span class="help-block">{{ $errors->first("vehiculomarca_id") }}</span>
                        @endif
                     </div>
+
                     <div class="well well-sm">
                         <button type="submit" class="btn btn-primary">Crear</button>
                         <a class="btn btn-link pull-right" href="{{ route('vehiculomodelos.index') }}"><i class="glyphicon glyphicon-backward"></i> Atrás</a>
                     </div>
+
                 </form>
 
             </div>

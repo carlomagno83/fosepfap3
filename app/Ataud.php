@@ -14,4 +14,24 @@ class Ataud extends Model
         return $this->belongsTo('App\Proveedor');
     }
 
+    public function color()
+    {
+        return $this->belongsTo('App\Color');
+    }
+
+    public function tamano()
+    {
+        return $this->belongsTo('App\Ataudtamano');
+    }
+
+    public function modelo()
+    {
+        return $this->belongsTo('App\Ataudmodelo');
+    }
+
+    public function servicios()
+    {
+        return $this->hasMany('App\Servicio');
+    }
+
 }

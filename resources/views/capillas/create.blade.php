@@ -116,14 +116,14 @@
                     </div>
                     <div class="form-group @if($errors->has('proveedor_id')) has-error @endif">
                        <label for="proveedor_id-field">Proveedor_id</label>
-                    <input type="text" id="proveedor_id-field" name="proveedor_id" class="form-control" value="{{ old("proveedor_id") }}" required/>
+                        {{Form::select('proveedor_id', \App\Proveedor::pluck('pro_rso','id') ,null, ['placeholder' => 'Seleccione Proveedor','id'=>'proveedor_id-field','class'=>'form-control','required'=>''])}}
                        @if($errors->has("proveedor_id"))
                         <span class="help-block">{{ $errors->first("proveedor_id") }}</span>
                        @endif
                     </div>
                     <div class="form-group @if($errors->has('candelabro_id')) has-error @endif">
                        <label for="candelabro_id-field">Candelabro_id</label>
-                    <input type="text" id="candelabro_id-field" name="candelabro_id" class="form-control" value="{{ old("candelabro_id") }}" required/>
+                        {{Form::select('candelabro_id', \App\Candelabro::pluck('can_nom','id') ,null, ['placeholder' => 'Seleccione Candelabro','id'=>'candelabro_id-field','class'=>'form-control','required'=>''])}}
                        @if($errors->has("candelabro_id"))
                         <span class="help-block">{{ $errors->first("candelabro_id") }}</span>
                        @endif

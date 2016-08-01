@@ -18,10 +18,16 @@
 
             <form action="#">
                 <div class="form-group">
+                    <label for="can_nom">CAN_NOM</label>
+                    <p class="form-control-static">{{$candelabro->can_nom}}</p>
+                </div>
+
+                <div class="form-group">
                      <label for="can_tipo">CAN_TIPO</label>
                      <p class="form-control-static">{{$candelabro->can_tipo}}</p>
                 </div>
-                    <div class="form-group">
+
+                <div class="form-group">
                      <label for="color_id">COLOR_ID</label>
                      <p class="form-control-static">{{$candelabro->color_id}}</p>
                 </div>

@@ -67,8 +67,8 @@
                     <td>{{$capilla->cap_rec}}</td>
                     <td>{{$capilla->cap_plt}}</td>
                     <td>{{$capilla->cap_mul}}</td>
-                    <td>{{$capilla->proveedor_id}}</td>
-                    <td>{{$capilla->candelabro_id}}</td>
+                    <td>{{$capilla->proveedor->pro_rso}}</td>
+                    <td>{{$capilla->}}</td>
                                     <td class="text-right">
                                         <a class="btn btn-xs btn-primary" href="{{ route('capillas.show', $capilla->id) }}"><i class="glyphicon glyphicon-eye-open"></i> Ver</a>
                                         <a class="btn btn-xs btn-warning" href="{{ route('capillas.edit', $capilla->id) }}"><i class="glyphicon glyphicon-edit"></i> Editar</a>

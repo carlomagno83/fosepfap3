@@ -32,7 +32,6 @@
                             <tr>
                                 <th>ID</th>
                                 <th>COL_NOM</th>
-                        <th>TIPOCANDELABRO_ID</th>
                                 <th class="text-right">OPCIONES</th>
                             </tr>
                         </thead>
@@ -42,7 +41,6 @@
                                 <tr>
                                     <td>{{$color->id}}</td>
                                     <td>{{$color->col_nom}}</td>
-                    <td>{{$color->tipocandelabro_id}}</td>
                                     <td class="text-right">
                                         <a class="btn btn-xs btn-primary" href="{{ route('colors.show', $color->id) }}"><i class="glyphicon glyphicon-eye-open"></i> Ver</a>
                                         <a class="btn btn-xs btn-warning" href="{{ route('colors.edit', $color->id) }}"><i class="glyphicon glyphicon-edit"></i> Editar</a>

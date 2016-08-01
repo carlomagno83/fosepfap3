@@ -30,13 +30,6 @@
                         <span class="help-block">{{ $errors->first("col_nom") }}</span>
                        @endif
                     </div>
-                    <div class="form-group @if($errors->has('tipocandelabro_id')) has-error @endif">
-                       <label for="tipocandelabro_id-field">Tipocandelabro_id</label>
-                    <input type="text" id="tipocandelabro_id-field" name="tipocandelabro_id" class="form-control" value="{{ old("tipocandelabro_id") }}" required/>
-                       @if($errors->has("tipocandelabro_id"))
-                        <span class="help-block">{{ $errors->first("tipocandelabro_id") }}</span>
-                       @endif
-                    </div>
                     <div class="well well-sm">
                         <button type="submit" class="btn btn-primary">Crear</button>
                         <a class="btn btn-link pull-right" href="{{ route('colors.index') }}"><i class="glyphicon glyphicon-backward"></i> Atrás</a>

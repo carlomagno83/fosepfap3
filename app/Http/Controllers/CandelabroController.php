@@ -41,6 +41,7 @@ class CandelabroController extends Controller {
 		$candelabro = new Candelabro();
 
 		$candelabro->can_tipo = $request->input("can_tipo");
+		$candelabro->can_nom = $request->input("can_nom");
         $candelabro->color_id = $request->input("color_id");
 
 		$candelabro->save();
@@ -86,6 +87,7 @@ class CandelabroController extends Controller {
 		$candelabro = Candelabro::findOrFail($id);
 
 		$candelabro->can_tipo = $request->input("can_tipo");
+		$candelabro->can_nom = $request->input("can_nom");
         $candelabro->color_id = $request->input("color_id");
 
 		$candelabro->save();

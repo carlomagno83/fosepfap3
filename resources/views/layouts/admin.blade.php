@@ -163,11 +163,6 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{URL::to('tipocandelabros')}}">
-                                    <span>Tipos Candelabros</span>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="{{URL::to('colors')}}">
                                     <span>Colors</span>
                                 </a>

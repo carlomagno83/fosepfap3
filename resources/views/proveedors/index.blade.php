@@ -56,7 +56,7 @@
                     <td>{{$proveedor->pro_mai}}</td>
                     <td>{{$proveedor->pro_obs}}</td>
                     <td>{{$proveedor->distrito_id}}</td>
-                    <td>{{$proveedor->categoria_id}}</td>
+                    <td>{{$proveedor->categoria->cat_nom}}</td>
                                     <td class="text-right">
                                         <a class="btn btn-xs btn-primary" href="{{ route('proveedors.show', $proveedor->id) }}"><i class="glyphicon glyphicon-eye-open"></i> Ver</a>
                                         <a class="btn btn-xs btn-warning" href="{{ route('proveedors.edit', $proveedor->id) }}"><i class="glyphicon glyphicon-edit"></i> Editar</a>

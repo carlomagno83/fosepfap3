@@ -48,7 +48,7 @@
                     <td>{{$urna->urn_mod}}</td>
                     <td>{{$urna->urn_col}}</td>
                     <td>{{$urna->urn_pre}}</td>
-                    <td>{{$urna->proveedor_id}}</td>
+                    <td>{{$urna->proveedor->pro_rso}}</td>
                                     <td class="text-right">
                                         <a class="btn btn-xs btn-primary" href="{{ route('urnas.show', $urna->id) }}"><i class="glyphicon glyphicon-eye-open"></i> Ver</a>
                                         <a class="btn btn-xs btn-warning" href="{{ route('urnas.edit', $urna->id) }}"><i class="glyphicon glyphicon-edit"></i> Editar</a>

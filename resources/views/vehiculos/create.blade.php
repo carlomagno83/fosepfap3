@@ -102,7 +102,7 @@
                     </div>
                     <div class="form-group @if($errors->has('vehiculomodelo_id')) has-error @endif">
                        <label for="vehiculomodelo_id-field">Vehiculomodelo_id</label>
-                    <input type="text" id="vehiculomodelo_id-field" name="vehiculomodelo_id" class="form-control" value="{{ old("vehiculomodelo_id") }}" required/>
+                        {{Form::select('vehiculomodelo_id', \App\Vehiculomodelo::pluck('vmo_nom','id') ,null, ['placeholder' => 'Seleccione Modelo','id'=>'vehiculomodelo_id-field','class'=>'form-control','required'=>''])}}
                        @if($errors->has("vehiculomodelo_id"))
                         <span class="help-block">{{ $errors->first("vehiculomodelo_id") }}</span>
                        @endif

@@ -29,4 +29,5 @@ class Proveedor extends Model
         return $this->hasMany('App\Ataud');
     }
 
+
 }
