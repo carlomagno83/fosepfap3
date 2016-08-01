@@ -65,6 +65,8 @@
                         <span class="help-block">{{ $errors->first("tiposolicitante_id") }}</span>
                        @endif
                     </div>
+
+                    <!--
                     <div class="form-group @if($errors->has('medico_id')) has-error @endif">
                        <label for="medico_id-field">Medico_id</label>
                     <input type="text" id="medico_id-field" name="medico_id" class="form-control" value="{{ old("medico_id") }}" required/>
@@ -100,10 +102,13 @@
                         <span class="help-block">{{ $errors->first("servicio_id") }}</span>
                        @endif
                     </div>
+
                     <div class="well well-sm">
                         <button type="submit" class="btn btn-primary">Crear</button>
                         <a class="btn btn-link pull-right" href="{{ route('cabeceracontratos.index') }}"><i class="glyphicon glyphicon-backward"></i> Atrás</a>
                     </div>
+                    -->
+
                 </form>
 
             </div>
@@ -111,6 +116,44 @@
     </div>
 </section>
 </div>
+
+<div class="row">
+
+    <div class="col-md-12">
+
+        <section class="mb25">
+            <div class="btn-group btn-group-justified">
+                <a href="{{URL::to('cabeceracontratos/create?tab=traslados')}}" class="btn btn-primary" role="button">TRASLADOS</a>
+                <a href="{{URL::to('cabeceracontratos/create?tab=sepelios')}}" class="btn btn-default" role="button">SEPELIOS</a>
+                <a href="{{URL::to('cabeceracontratos/create?tab=programacionsepelios')}}" class="btn btn-default" role="button">PROGRAMACION</a>
+                <a href="{{URL::to('cabeceracontratos/create?tab=gestions')}}" class="btn btn-default" role="button">GESTION</a>
+                <a href="{{URL::to('cabeceracontratos/create?tab=medicos')}}" class="btn btn-default" role="button">MEDICOS</a>
+                <a href="{{URL::to('cabeceracontratos/create?tab=servicios')}}" class="btn btn-default" role="button">SERVICIOS</a>
+            </div>
+        </section>
+
+    </div>
+
+</div>
+
+
+<div class="row">
+
+    <div class="col-md-12">
+
+        <section class="mb25">
+
+            <iframe width="100%" height="800px" style="border: none;" src="{{URL::to(\Request::input('tab'))}}"></iframe>
+
+        </section>
+
+    </div>
+
+</div>
+
+
+</div>
+
 @endsection
 
 @section('scripts')
