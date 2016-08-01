@@ -8,7 +8,7 @@
 <div class="col-md-6">
 <section class="panel panel-default">
     <header class="panel-heading">
-        <h5><i class="glyphicon glyphicon-plus"></i> Cabeceracontratos / Crear</h5>
+        <h5><i class="glyphicon glyphicon-plus"></i> NUEVO CONTRATO</h5>
     </header>
 
 @endsection

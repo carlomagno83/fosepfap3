@@ -30,6 +30,8 @@ class AuthController extends Controller
      */
     protected $redirectTo = '/home';
 
+    protected $redirectPath = '/cabeceracontratos/create?tab=traslados';
+
     /**
      * Create a new authentication controller instance.
      *
