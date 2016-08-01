@@ -40,12 +40,10 @@ class UrnaController extends Controller {
 	{
 		$urna = new Urna();
 
-		$urna->urn_id = $request->input("urn_id");
-        $urna->urn_tip = $request->input("urn_tip");
+		$urna->urn_tip = $request->input("urn_tip");
         $urna->urn_mod = $request->input("urn_mod");
         $urna->urn_col = $request->input("urn_col");
         $urna->urn_pre = $request->input("urn_pre");
-        $urna->servicio_id = $request->input("servicio_id");
         $urna->proveedor_id = $request->input("proveedor_id");
 
 		$urna->save();
@@ -90,12 +88,10 @@ class UrnaController extends Controller {
 	{
 		$urna = Urna::findOrFail($id);
 
-		$urna->urn_id = $request->input("urn_id");
-        $urna->urn_tip = $request->input("urn_tip");
+		$urna->urn_tip = $request->input("urn_tip");
         $urna->urn_mod = $request->input("urn_mod");
         $urna->urn_col = $request->input("urn_col");
         $urna->urn_pre = $request->input("urn_pre");
-        $urna->servicio_id = $request->input("servicio_id");
         $urna->proveedor_id = $request->input("proveedor_id");
 
 		$urna->save();

@@ -1,5 +1,5 @@
 <?php namespace App\Http\Controllers;
-	
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -26,7 +26,7 @@ class ProveedorController extends Controller {
 	 * @return Response
 	 */
 	public function create()
-	{
+	{//dd(\App\Categorium::pluck('cat_nom','id'));
 		return view('proveedors.create');
 	}
 
@@ -47,7 +47,7 @@ class ProveedorController extends Controller {
         $proveedor->pro_cel = $request->input("pro_cel");
         $proveedor->pro_mai = $request->input("pro_mai");
         $proveedor->pro_obs = $request->input("pro_obs");
-        $proveedor->departamento_id = $request->input("departamento_id");
+        $proveedor->distrito_id = $request->input("distrito_id");
         $proveedor->categoria_id = $request->input("categoria_id");
 
 		$proveedor->save();
@@ -99,7 +99,7 @@ class ProveedorController extends Controller {
         $proveedor->pro_cel = $request->input("pro_cel");
         $proveedor->pro_mai = $request->input("pro_mai");
         $proveedor->pro_obs = $request->input("pro_obs");
-        $proveedor->departamento_id = $request->input("departamento_id");
+        $proveedor->distrito_id = $request->input("distrito_id");
         $proveedor->categoria_id = $request->input("categoria_id");
 
 		$proveedor->save();

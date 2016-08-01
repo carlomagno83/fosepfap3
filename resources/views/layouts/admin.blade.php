@@ -41,6 +41,7 @@
     <style>
 
 
+
     </style>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -149,6 +150,56 @@
                             <li>
                                 <a href="{{URL::to('urnas')}}">
                                     <span>Urnas</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{URL::to('capillas')}}">
+                                    <span>Capillas</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{URL::to('candelabros')}}">
+                                    <span>Candelabros</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{URL::to('tipocandelabros')}}">
+                                    <span>Tipos Candelabros</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{URL::to('colors')}}">
+                                    <span>Colors</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{URL::to('ataudmodelos')}}">
+                                    <span>Atauds Modelos</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{URL::to('atauds')}}">
+                                    <span>Atauds</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{URL::to('ataudtamanos')}}">
+                                    <span>Ataud Tamaños</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{URL::to('vehiculomarcas')}}">
+                                    <span>Vehiculos Marcas</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{URL::to('vehiculomodelos')}}">
+                                    <span>Vehiculos Modelos</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{URL::to('vehiculos')}}">
+                                    <span>Vehiculos</span>
                                 </a>
                             </li>
                         </ul>

@@ -40,8 +40,7 @@ class CategoriumController extends Controller {
 	{
 		$categorium = new Categorium();
 
-		$categorium->cat_id = $request->input("cat_id");
-        $categorium->cat_nom = $request->input("cat_nom");
+		$categorium->cat_nom = $request->input("cat_nom");
 
 		$categorium->save();
 
@@ -85,8 +84,7 @@ class CategoriumController extends Controller {
 	{
 		$categorium = Categorium::findOrFail($id);
 
-		$categorium->cat_id = $request->input("cat_id");
-        $categorium->cat_nom = $request->input("cat_nom");
+		$categorium->cat_nom = $request->input("cat_nom");
 
 		$categorium->save();
 

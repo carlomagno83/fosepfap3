@@ -21,7 +21,7 @@ class CreateProveedorsTable extends Migration {
             $table->string('pro_cel');
             $table->string('pro_mai');
             $table->string('pro_obs');
-            $table->int('departamento_id');
+            $table->int('distrito_id');
             $table->int('categoria_id');
             $table->timestamps();
         });

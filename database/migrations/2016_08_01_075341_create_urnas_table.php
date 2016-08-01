@@ -14,12 +14,10 @@ class CreateUrnasTable extends Migration {
 	{
 		Schema::create('urnas', function(Blueprint $table) {
             $table->increments('id');
-            $table->int('urn_id');
             $table->string('urn_tip');
             $table->string('urn_mod');
             $table->string('urn_col');
             $table->int('urn_pre');
-            $table->int('servicio_id');
             $table->int('proveedor_id');
             $table->timestamps();
         });

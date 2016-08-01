@@ -9,14 +9,24 @@ class Proveedor extends Model
 
     protected $table = 'proveedor';
 
-    public function Categoria()
+    public function capillas()
     {
-        return $this->belongsTo('App\Categorium');
+        return $this->hasMany('App\Capilla');
     }
 
     public function urnas()
     {
         return $this->hasMany('App\Urna');
-    }    
+    }
+
+    public function categoria()
+    {
+        return $this->belongsTo('App\Categorium');
+    }
+
+    public function atauds()
+    {
+        return $this->hasMany('App\Ataud');
+    }
 
 }
