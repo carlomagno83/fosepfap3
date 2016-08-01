@@ -48,13 +48,13 @@
                                 <tr>
                                     <td>{{$ataud->id}}</td>
                                     <td>{{$ataud->ata_tma}}</td>
-                    <td>{{$ataud->ata_pre}}</td>
-                    <td>{{$ataud->ata_noc}}</td>
-                    <td>{{$ataud->ata_fec}}</td>
-                    <td>{{$ataud->proveedor_id}}</td>
-                    <td>{{$ataud->color_id}}</td>
-                    <td>{{$ataud->ataudmodelo_id}}</td>
-                    <td>{{$ataud->ataudtamano_id}}</td>
+                                    <td>{{$ataud->ata_pre}}</td>
+                                    <td>{{$ataud->ata_noc}}</td>
+                                    <td>{{$ataud->ata_fec}}</td>
+                                    <td>{{$ataud->proveedor->pro_rso}}</td>
+                                    <td>{{$ataud->color->col_nom}}</td>
+                                    <td>modelo1</td>
+                                    <td>tamaño1</td>
                                     <td class="text-right">
                                         <a class="btn btn-xs btn-primary" href="{{ route('atauds.show', $ataud->id) }}"><i class="glyphicon glyphicon-eye-open"></i> Ver</a>
                                         <a class="btn btn-xs btn-warning" href="{{ route('atauds.edit', $ataud->id) }}"><i class="glyphicon glyphicon-edit"></i> Editar</a>

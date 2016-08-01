@@ -62,7 +62,7 @@
                     <td>{{$vehiculo->veh_eje}}</td>
                     <td>{{$vehiculo->veh_rue}}</td>
                     <td>{{$vehiculo->veh_com}}</td>
-                    <td>{{$vehiculo->vehiculomodelo_id}}</td>
+                    <td>modelo1</td>
                                     <td class="text-right">
                                         <a class="btn btn-xs btn-primary" href="{{ route('vehiculos.show', $vehiculo->id) }}"><i class="glyphicon glyphicon-eye-open"></i> Ver</a>
                                         <a class="btn btn-xs btn-warning" href="{{ route('vehiculos.edit', $vehiculo->id) }}"><i class="glyphicon glyphicon-edit"></i> Editar</a>

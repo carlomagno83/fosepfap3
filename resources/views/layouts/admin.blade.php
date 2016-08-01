@@ -197,6 +197,11 @@
                                     <span>Vehiculos</span>
                                 </a>
                             </li>
+                            <li>
+                                <a href="{{URL::to('servicios')}}">
+                                    <span>Servicios</span>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <!-- /ui -->

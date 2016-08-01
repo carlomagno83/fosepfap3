@@ -44,7 +44,7 @@
                                     <td>{{$candelabro->id}}</td>
                                     <td>{{$candelabro->can_tipo}}</td>
                                     <td>{{$candelabro->can_nom}}</td>
-                                    <td>{{$candelabro->color_id}}</td>
+                                    <td>{{$candelabro->color->col_nom}}</td>
                                     <td class="text-right">
                                         <a class="btn btn-xs btn-primary" href="{{ route('candelabros.show', $candelabro->id) }}"><i class="glyphicon glyphicon-eye-open"></i> Ver</a>
                                         <a class="btn btn-xs btn-warning" href="{{ route('candelabros.edit', $candelabro->id) }}"><i class="glyphicon glyphicon-edit"></i> Editar</a>
