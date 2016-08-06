@@ -11,7 +11,7 @@
 @endsection
 
 @section('header')
-<div class="col-md-6">
+
 <section class="panel panel-default">
 
     <header class="panel-heading">
@@ -100,7 +100,7 @@
         </div>
     </div>
 </section>
-</div>
+
 @endsection
 
 @section('scripts')

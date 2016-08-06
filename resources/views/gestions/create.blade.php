@@ -11,7 +11,7 @@
 @endsection
 
 @section('header')
-<div class="col-md-6">
+
 <section class="panel panel-default">
     <header class="panel-heading">
         <h5><i class="glyphicon glyphicon-plus"></i> Gestions / Crear</h5>
@@ -98,7 +98,7 @@
         </div>
     </div>
 </section>
-</div>
+
 @endsection
 
 @section('scripts')
