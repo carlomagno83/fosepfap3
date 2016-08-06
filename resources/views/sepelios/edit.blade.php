@@ -1,6 +1,11 @@
 @extends('layouts.iframe')
 
 @section('css')
+    <style>
+        .main-content .content-wrap .wrapper {
+            padding-top: 0px;
+        }
+    </style>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/css/bootstrap-datepicker.css" rel="stylesheet">
 @endsection
 
