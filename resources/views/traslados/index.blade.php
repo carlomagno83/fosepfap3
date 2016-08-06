@@ -1,5 +1,13 @@
 @extends('layouts.iframe')
 
+@section('css')
+    <style>
+        .main-content .content-wrap .wrapper {
+            padding-top: 0px;
+        }
+    </style>
+@endsection
+
 @section('header')
 
 <section class="panel panel-default">

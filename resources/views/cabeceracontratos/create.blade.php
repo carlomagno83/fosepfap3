@@ -5,7 +5,7 @@
 @endsection
 
 @section('header')
-<div class="col-md-6">
+<div class="col-md-12">
 <section class="panel panel-default">
     <header class="panel-heading">
         <h5><i class="glyphicon glyphicon-plus"></i> NUEVO CONTRATO</h5>
@@ -18,10 +18,11 @@
 
     <div class="panel-body">
         <div class="row">
-            <div class="col-md-12">
 
-                <form action="{{ route('cabeceracontratos.store') }}" method="POST">
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <form action="{{ route('cabeceracontratos.store') }}" method="POST">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+            <div class="col-md-4">
 
                     <div class="form-group @if($errors->has('con_fec')) has-error @endif">
                        <label for="con_fec-field">Con_fec</label>
@@ -37,34 +38,7 @@
                         <span class="help-block">{{ $errors->first("con_est") }}</span>
                        @endif
                     </div>
-                    <div class="form-group @if($errors->has('con_tso')) has-error @endif">
-                       <label for="con_tso-field">Con_tso</label>
-                    <input type="text" id="con_tso-field" name="con_tso" class="form-control" value="{{ old("con_tso") }}" required/>
-                       @if($errors->has("con_tso"))
-                        <span class="help-block">{{ $errors->first("con_tso") }}</span>
-                       @endif
-                    </div>
-                    <div class="form-group @if($errors->has('con_dni')) has-error @endif">
-                       <label for="con_dni-field">Con_dni</label>
-                    <input type="text" id="con_dni-field" name="con_dni" class="form-control" value="{{ old("con_dni") }}" required/>
-                       @if($errors->has("con_dni"))
-                        <span class="help-block">{{ $errors->first("con_dni") }}</span>
-                       @endif
-                    </div>
-                    <div class="form-group @if($errors->has('con_tse')) has-error @endif">
-                       <label for="con_tse-field">Con_tse</label>
-                    <input type="text" id="con_tse-field" name="con_tse" class="form-control" value="{{ old("con_tse") }}" required/>
-                       @if($errors->has("con_tse"))
-                        <span class="help-block">{{ $errors->first("con_tse") }}</span>
-                       @endif
-                    </div>
-                    <div class="form-group @if($errors->has('tiposolicitante_id')) has-error @endif">
-                       <label for="tiposolicitante_id-field">Tiposolicitante_id</label>
-                    <input type="text" id="tiposolicitante_id-field" name="tiposolicitante_id" class="form-control" value="{{ old("tiposolicitante_id") }}" required/>
-                       @if($errors->has("tiposolicitante_id"))
-                        <span class="help-block">{{ $errors->first("tiposolicitante_id") }}</span>
-                       @endif
-                    </div>
+
 
                     <!--
                     <div class="form-group @if($errors->has('medico_id')) has-error @endif">
@@ -109,27 +83,78 @@
                     </div>
                     -->
 
-                </form>
-
             </div>
+
+
+            <div class="col-md-4">
+                <div class="form-group @if($errors->has('con_tso')) has-error @endif">
+                    <label for="con_tso-field">Con_tso</label>
+                    <input type="text" id="con_tso-field" name="con_tso" class="form-control" value="{{ old("con_tso") }}" required/>
+                    @if($errors->has("con_tso"))
+                        <span class="help-block">{{ $errors->first("con_tso") }}</span>
+                    @endif
+                </div>
+                <div class="form-group @if($errors->has('con_dni')) has-error @endif">
+                    <label for="con_dni-field">Con_dni</label>
+                    <input type="text" id="con_dni-field" name="con_dni" class="form-control" value="{{ old("con_dni") }}" required/>
+                    @if($errors->has("con_dni"))
+                        <span class="help-block">{{ $errors->first("con_dni") }}</span>
+                    @endif
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group @if($errors->has('con_tse')) has-error @endif">
+                    <label for="con_tse-field">Con_tse</label>
+                    <input type="text" id="con_tse-field" name="con_tse" class="form-control" value="{{ old("con_tse") }}" required/>
+                    @if($errors->has("con_tse"))
+                        <span class="help-block">{{ $errors->first("con_tse") }}</span>
+                    @endif
+                </div>
+                <div class="form-group @if($errors->has('tiposolicitante_id')) has-error @endif">
+                    <label for="tiposolicitante_id-field">Tiposolicitante_id</label>
+                    <input type="text" id="tiposolicitante_id-field" name="tiposolicitante_id" class="form-control" value="{{ old("tiposolicitante_id") }}" required/>
+                    @if($errors->has("tiposolicitante_id"))
+                        <span class="help-block">{{ $errors->first("tiposolicitante_id") }}</span>
+                    @endif
+                </div>
+            </div>
+
+
+        </form>
+
         </div>
+
     </div>
+
 </section>
 </div>
 
+
+<div class="col-md-12">
+
+    <div class="btn-group btn-group-justified">
+        <a href="{{URL::to('cabeceracontratos/create?tab=traslados')}}" class="btn btn-primary" role="button">TRASLADOS</a>
+        <a href="{{URL::to('cabeceracontratos/create?tab=sepelios')}}" class="btn btn-default" role="button">SEPELIOS</a>
+        <a href="{{URL::to('cabeceracontratos/create?tab=programacionsepelios')}}" class="btn btn-default" role="button">PROGRAMACION</a>
+        <a href="{{URL::to('cabeceracontratos/create?tab=gestions')}}" class="btn btn-default" role="button">GESTION</a>
+        <a href="{{URL::to('cabeceracontratos/create?tab=medicos')}}" class="btn btn-default" role="button">MEDICOS</a>
+        <a href="{{URL::to('cabeceracontratos/create?tab=servicios')}}" class="btn btn-default" role="button">SERVICIOS</a>
+    </div>
+
+</div>
+
+
+
+
 <div class="row">
 
     <div class="col-md-12">
 
         <section class="mb25">
-            <div class="btn-group btn-group-justified">
-                <a href="{{URL::to('cabeceracontratos/create?tab=traslados')}}" class="btn btn-primary" role="button">TRASLADOS</a>
-                <a href="{{URL::to('cabeceracontratos/create?tab=sepelios')}}" class="btn btn-default" role="button">SEPELIOS</a>
-                <a href="{{URL::to('cabeceracontratos/create?tab=programacionsepelios')}}" class="btn btn-default" role="button">PROGRAMACION</a>
-                <a href="{{URL::to('cabeceracontratos/create?tab=gestions')}}" class="btn btn-default" role="button">GESTION</a>
-                <a href="{{URL::to('cabeceracontratos/create?tab=medicos')}}" class="btn btn-default" role="button">MEDICOS</a>
-                <a href="{{URL::to('cabeceracontratos/create?tab=servicios')}}" class="btn btn-default" role="button">SERVICIOS</a>
-            </div>
+
+            <iframe width="100%" height="600px" style="border: none;" src="{{URL::to(\Request::input('tab'))}}"></iframe>
+
         </section>
 
     </div>
@@ -137,22 +162,6 @@
 </div>
 
 
-<div class="row">
-
-    <div class="col-md-12">
-
-        <section class="mb25">
-
-            <iframe width="100%" height="800px" style="border: none;" src="{{URL::to(\Request::input('tab'))}}"></iframe>
-
-        </section>
-
-    </div>
-
-</div>
-
-
-</div>
 
 @endsection
 
